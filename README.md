@@ -29,8 +29,15 @@ end
 ``` 
 
 1. `Tweet.all` 
+class Tweet < ActiveRecord::Base
+    SELECT * FROM tweets;
+end
 2. `Tweet.find(5)`
+    SELECT * FROM tweets ASC LIMIT 5;
 3. `Tweet.find_by(user_id: 7)`
+    SELECT * FROM tweets WHERE user_id = 7;
 4. `Tweet.where(user_id: 7)` 
+    SELECT * FROM tweets WHERE user_id = 7;
 5. `Tweet.create(user_id: 5, message: 'making some coffee')`
+    INSERT INTO tweets (user_id, message) VALUES (5, 'making some coffee')
 6. `Tweet.destroy(7)` 
